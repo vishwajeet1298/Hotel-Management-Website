@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>Login and Registration </title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="hero">
+		<div class="form-box">
+			<div class="button-box">
+				<div id="btn"></div>
+				<button type="button" class="toggle-btn" onclick="Login()">Log In</button>
+				<button type="button" class="toggle-btn" onclick="Register()">Register</button>
+			</div>
+				<div class="social-icon">
+			<img src="fb.png">
+			<img src="tw.png">
+			<img src="gp.png">
+		</div>
+		<form id="Login" class="input-group" method="post" action="logintest1.php">
+			<input type="text" class="input-field" placeholder="User Id" name="id" 
+			required>
+			<input type="Password" class="input-field" placeholder="Password" name="pass" 
+			required>
+			<input type="checkbox" class="check-box"><span>Remember Password</span>
+			<button type="submit" class="submit-btn" value="Go" name="submit">Login</button>
+		</form>
+		<form id="Register" class="input-group" action="connect1.php" method="POST">
+			<input type="text" class="input-field"  name="name" placeholder="Full Name"
+			required>
+			<input type="text" class="input-field" name="id" placeholder="User Id"
+			required>
+			<input type="email" class="input-field" name="email" placeholder="Email Id"
+			required>
+			<input type="Password" class="input-field" name="pass" placeholder="Password"
+			required>
+
+			<input type="checkbox" class="check-box"><span>I agree to the terms & condition</span>
+			<button type="submit" class="submit-btn" value="Save">Register</button>
+		</form>
+		</div>
+	</div>
+	<script>
+		var x =document.getElementById("Login");
+		var y =document.getElementById("Register");
+		var z =document.getElementById("btn");
+		function Register()
+		{
+			x.style.left="-400px";
+			y.style.left="50px";
+			z.style.left="110px";
+
+		}
+			function Login()
+		{
+			x.style.left="50px";
+			y.style.left="450px";
+			z.style.left="0";
+
+		}
+	</script>
+	
+</body>
+</html>
